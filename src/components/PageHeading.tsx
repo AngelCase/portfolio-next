@@ -2,6 +2,7 @@
 
 import { useTypeScramble } from "@/hooks/useTypeScramble";
 import { useEffect } from "react";
+import styles from "./PageHeading.module.scss";
 
 export default function PageHeading({ text }: { text: string }) {
   const { scramble, current } = useTypeScramble(text);
@@ -12,5 +13,5 @@ export default function PageHeading({ text }: { text: string }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <h1 className="text">{current}</h1>;
+  return <h1 className={styles.text}>{current}</h1>;
 }
