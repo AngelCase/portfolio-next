@@ -1,0 +1,40 @@
+@import "../styles/variable.scss";
+
+.nav {
+  margin-top: 24px;
+  margin-left: 4px;
+}
+
+.separator {
+  border-left: solid 2px $blue;
+  height: 24px;
+}
+
+.list {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+
+  &__item {
+    font-size: large;
+    list-style: none;
+    text-decoration: none;
+
+    a {
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+    }
+
+    a:hover {
+      background-color: $light-blue;
+    }
+
+    &__link,
+    &__link:visited {
+      color: #222;
+    }
+  }
+}

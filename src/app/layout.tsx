@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "../styles/reset.css";
-import "../styles/globals.scss";
 import Link from "next/link";
-
-const inter = Inter({ subsets: ["latin"] });
+import styles from "./layout.module.scss";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -18,24 +15,32 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={inter.className}>
+      <body>
         <header>
-          <nav className="nav">
-            <ul className="list">
-              <li className="list__item">
-                <Link href="/">TOP</Link>
+          <nav className={styles.nav}>
+            <ul className={styles.list}>
+              <li className={styles.list__item}>
+                <Link className={styles.list__item__link} href="/">
+                  TOP
+                </Link>
               </li>
-              <div className="separator"></div>
-              <li className="list__item">
-                <Link href="/skills">SKILLS</Link>
+              <div className={styles.separator}></div>
+              <li className={styles.list__item}>
+                <Link className={styles.list__item__link} href="/skills">
+                  SKILLS
+                </Link>
               </li>
-              <div className="separator"></div>
-              <li className="list__item">
-                <Link href="/works">WORKS</Link>
+              <div className={styles.separator}></div>
+              <li className={styles.list__item}>
+                <Link className={styles.list__item__link} href="/works">
+                  WORKS
+                </Link>
               </li>
-              <div className="separator"></div>
-              <li className="list__item">
-                <Link href="/contact">CONTACT</Link>
+              <div className={styles.separator}></div>
+              <li className={styles.list__item}>
+                <Link className={styles.list__item__link} href="/contact">
+                  CONTACT
+                </Link>
               </li>
             </ul>
           </nav>
